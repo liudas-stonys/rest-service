@@ -17,7 +17,11 @@ public class Helper {
         Arrays.stream(ctx.getBeanDefinitionNames()).forEach(Helper::logInfo);
     }
 
-    private static void logInfo(String msg) {
+    public static void logInfo(String msg) {
         LOGGER.log(Level.INFO, msg);
+    }
+
+    public static void logWarning(String msg) {
+        LOGGER.log(Level.WARNING, msg);
     }
 }
