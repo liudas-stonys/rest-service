@@ -1,28 +1,13 @@
 package lt.liudasstonys.restservice.entity;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
-@Data
-//@NoArgsConstructor
-//@RequiredArgsConstructor
-//@AllArgsConstructor
-//@Getter
-//@Setter
+@RequiredArgsConstructor
+@Getter
+@Setter
 public class Greeting {
-
     private final long id;
     private final String content;
-
-//    public Greeting(long id, String content) {
-//        this.id = id;
-//        this.content = content;
-//    }
-//
-//    public long getId() {
-//        return id;
-//    }
-//
-//    public String getContent() {
-//        return content;
-//    }
 }
