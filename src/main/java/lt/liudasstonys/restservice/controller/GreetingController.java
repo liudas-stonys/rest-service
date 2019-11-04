@@ -13,7 +13,11 @@ import java.util.concurrent.atomic.AtomicLong;
 public class GreetingController {
 
     private final AtomicLong counter = (AtomicLong) Helper.ctx.getBean("getCounter");
-    private final GreetingService greetingService = (GreetingService) Helper.ctx.getBean("getGreetingService");
+    private final GreetingService greetingService;
+
+    public GreetingController(GreetingService greetingService) {
+        this.greetingService = greetingService;
+    }
 
     @GetMapping("/greeting")
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
